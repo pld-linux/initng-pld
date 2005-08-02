@@ -1,4 +1,5 @@
 Summary:	initng initscripts for PLD
+Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
 Version:	0.0.1
 %define		_snap 20050730
@@ -8,17 +9,20 @@ Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
 # Source0-md5:	fd94362d83494fa6ea41a1cc83a3db33
 Requires:	initng
-Requires:	mount
-Requires:	util-linux
-Requires:	net-tools
 Requires:	module-init-tools
+Requires:	mount
+Requires:	net-tools
+Requires:	util-linux
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_sysconfdir /etc/initng
 
 %description
-TODO
+initng initscripts for PLD.
+
+%description -l pl
+Skrypty inicjalizuj±ce initng dla PLD.
 
 %prep
 %setup -q -n initng-initscripts-%{_snap}
