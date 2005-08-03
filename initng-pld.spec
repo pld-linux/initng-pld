@@ -2,7 +2,7 @@ Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
 Version:	0.0.1
-%define		_snap 20050730
+%define		_snap 20050803
 Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
