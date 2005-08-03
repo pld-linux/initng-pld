@@ -7,7 +7,7 @@ Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	fd94362d83494fa6ea41a1cc83a3db33
+# Source0-md5:	17a08c9107517ef4ba034df472bbac4a
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
