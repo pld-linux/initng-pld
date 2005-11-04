@@ -13,6 +13,7 @@ Requires:	module-init-tools
 Requires:	mount
 Requires:	net-tools
 Requires:	util-linux
+Requires:	agetty
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
