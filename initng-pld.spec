@@ -1,13 +1,13 @@
 Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
-Version:	0.0.6
+Version:	0.0.7
 %define		_snap 20051104
-Release:	0.%{_snap}.2
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	09366ccbf6cd02e700efeb0e7ce16f2a
+# Source0-md5:	1fdc7fa7872fcf17c4fc1532a1124a71
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
@@ -71,7 +71,6 @@ fi \
 %_initng_service_hook -p clamav daemon/clamd
 %_initng_service_hook -p courier-authlib daemon/courier-authlib
 %_initng_service_hook -p courier-imap daemon/courier-imap daemon/courier-imap-ssl
-%_initng_service_hook -p crondaemon daemon/crond
 %_initng_service_hook -p cups daemon/cupsd
 %_initng_service_hook -p cyrus-sasl-saslauthd daemon/saslauthd
 %_initng_service_hook -p dbus daemon/messagebus
@@ -80,6 +79,8 @@ fi \
 %_initng_service_hook -p eventum-irc daemon/eventum-irc
 %_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
 %_initng_service_hook -p gpm daemon/gpm
+%_initng_service_hook -p hc-cron daemon/crond
+%_initng_service_hook -p hdparm system/hdparm
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p imapproxy daemon/imapproxy
 %_initng_service_hook -p iptables-init net/iptables daemon/ip6tables
@@ -118,9 +119,9 @@ fi \
 %_initng_service_hook -p tuxaator-init daemon/tuxaator
 %_initng_service_hook -p umlinux-init daemon/uml
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers-default
+%_initng_service_hook -p vixie-cron daemon/crond
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p yum daemon/yum
-%_initng_service_hook -p hdparm system/hdparm
 
 %files
 %defattr(644,root,root,755)
