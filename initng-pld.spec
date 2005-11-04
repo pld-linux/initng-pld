@@ -1,13 +1,13 @@
 Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
-Version:	0.0.7
-%define		_snap 20051104
-Release:	0.%{_snap}.3
+Version:	0.0.9
+%define		_snap 20051105
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	1fdc7fa7872fcf17c4fc1532a1124a71
+# Source0-md5:	12c1620f589114445bd0e3b3a96545f7
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
@@ -74,6 +74,7 @@ fi \
 %_initng_service_hook -p courier-imap daemon/courier-imap daemon/courier-imap-ssl
 %_initng_service_hook -p cups daemon/cupsd
 %_initng_service_hook -p cyrus-sasl-saslauthd daemon/saslauthd
+%_initng_service_hook -p daemontools daemon/svscan
 %_initng_service_hook -p dbus daemon/messagebus
 %_initng_service_hook -p dhcp daemon/dhcpd
 %_initng_service_hook -p dspam daemon/dspam
@@ -106,6 +107,7 @@ fi \
 %_initng_service_hook -p portmap daemon/portmap
 %_initng_service_hook -p postfix daemon/postfix
 %_initng_service_hook -p pound daemon/pound
+%_initng_service_hook -p preload daemon/preload
 %_initng_service_hook -p pure-ftpd daemon/pure-ftpd
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
 %_initng_service_hook -p rc-scripts daemon/cpusets daemon/network daemon/timezone
