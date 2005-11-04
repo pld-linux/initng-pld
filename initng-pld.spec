@@ -1,13 +1,13 @@
 Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
-Version:	0.0.3
+Version:	0.0.4
 %define		_snap 20051104
-Release:	0.%{_snap}.12
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	e77417df972c02b3fb1a3427ffc22b37
+# Source0-md5:	0d4da42908afef0ee4cc62448dd2d00b
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
