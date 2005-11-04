@@ -1,13 +1,13 @@
 Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
-Version:	0.0.5
+Version:	0.0.6
 %define		_snap 20051104
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	4f41cbf3ca076f8c398b42d178de75fc
+# Source0-md5:	09366ccbf6cd02e700efeb0e7ce16f2a
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
@@ -47,7 +47,7 @@ if [ "$1" = "1" ] && [ "$2" = "1" ]; then \
 	done \
 fi \
 \
-%triggerin -- %{-p*} \
+%triggerun -- %{-p*} \
 %{?debug:set -x; echo triggepostun %{name}-%{version}-%{release} of %{-p*}}\
 if [ "$1" = "0" ] || [ "$2" = "0" ]; then \
 	for s in %*; do \
@@ -120,6 +120,7 @@ fi \
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers-default
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p yum daemon/yum
+%_initng_service_hook -p hdparm system/hdparm
 
 %files
 %defattr(644,root,root,755)
