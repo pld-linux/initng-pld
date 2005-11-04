@@ -3,7 +3,7 @@ Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
 Version:	0.0.7
 %define		_snap 20051104
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.3
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
@@ -14,6 +14,7 @@ Requires:	mount
 Requires:	net-tools
 Requires:	util-linux
 Requires:	agetty
+Conflicts:	mDNSResponder < 107-2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
