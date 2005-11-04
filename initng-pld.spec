@@ -1,13 +1,13 @@
 Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
-Version:	0.0.4
+Version:	0.0.5
 %define		_snap 20051104
-Release:	0.%{_snap}.2
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	0d4da42908afef0ee4cc62448dd2d00b
+# Source0-md5:	4f41cbf3ca076f8c398b42d178de75fc
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
@@ -78,12 +78,14 @@ fi \
 %_initng_service_hook -p dhcp daemon/dhcpd
 %_initng_service_hook -p dspam daemon/dspam
 %_initng_service_hook -p eventum-irc daemon/eventum-irc
+%_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
 %_initng_service_hook -p gpm daemon/gpm
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p imapproxy daemon/imapproxy
-%_initng_service_hook -p iptables-init daemon/ip6tables
+%_initng_service_hook -p iptables-init net/iptables daemon/ip6tables
 %_initng_service_hook -p ism-cli daemon/dpcproxy
 %_initng_service_hook -p kbd daemon/console
+%_initng_service_hook -p kdenetwork-lanbrowser daemon/lisa
 %_initng_service_hook -p kdm daemon/kdm
 %_initng_service_hook -p klogd daemon/klogd
 %_initng_service_hook -p lighttpd daemon/lighttpd
@@ -117,8 +119,7 @@ fi \
 %_initng_service_hook -p umlinux-init daemon/uml
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers-default
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
-
-%_initng_service_hook -p iptables-init net/iptables
+%_initng_service_hook -p yum daemon/yum
 
 %files
 %defattr(644,root,root,755)
