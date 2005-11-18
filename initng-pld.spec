@@ -2,12 +2,12 @@ Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
 Version:	0.0.9
-%define		_snap 20051105
-Release:	0.%{_snap}.1
+%define		_snap 20051107
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	12c1620f589114445bd0e3b3a96545f7
+# Source0-md5:	9aa273d7c967e2e7a222c6013d360c0d
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
@@ -125,6 +125,7 @@ fi \
 %_initng_service_hook -p vixie-cron daemon/crond
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p yum daemon/yum
+%_initng_service_hook -p nagios-nrpe daemon/nrpe
 
 %files
 %defattr(644,root,root,755)
