@@ -1,13 +1,13 @@
 Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
-Version:	0.0.9
-%define		_snap 20051122
+Version:	0.4.6
+%define		_snap 20051130
 Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
-Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{_snap}.tar.bz2
-# Source0-md5:	76e91f64504ab35686236d69b1363b94
+Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{version}-%{_snap}.tar.bz2
+# Source0-md5:	42c5b5a80e6c4cc1425c6941722cfd24
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
@@ -28,12 +28,12 @@ initng initscripts for PLD.
 Skrypty inicjalizuj±ce initng dla PLD.
 
 %prep
-%setup -q -n initng-initscripts-%{_snap}
+%setup -q -n initng-initscripts-%{version}-%{_snap}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_sbindir}}
-cp -a */ *.i *.runlevel $RPM_BUILD_ROOT%{_sysconfdir}
+cp -a */ *.runlevel $RPM_BUILD_ROOT%{_sysconfdir}
 install shutdown_script $RPM_BUILD_ROOT%{_sbindir}
 
 %clean
@@ -130,6 +130,5 @@ fi \
 %files
 %defattr(644,root,root,755)
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*.runlevel
-%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*.i
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*/*.i
 %attr(755,root,root) %{_sbindir}/*
