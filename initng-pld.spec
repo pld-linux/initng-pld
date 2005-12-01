@@ -2,12 +2,12 @@ Summary:	initng initscripts for PLD
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
 Version:	0.4.6
-%define		_snap 20051130
+%define		_snap 20051201
 Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	42c5b5a80e6c4cc1425c6941722cfd24
+# Source0-md5:	d55f7f43c584f675fa171d2f6ee13238
 Requires:	initng
 Requires:	module-init-tools
 Requires:	mount
@@ -79,6 +79,7 @@ fi \
 %_initng_service_hook -p dhcp daemon/dhcpd
 %_initng_service_hook -p dspam daemon/dspam
 %_initng_service_hook -p eventum-irc daemon/eventum-irc
+%_initng_service_hook -p fam-standalone daemon/famd
 %_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
 %_initng_service_hook -p gpm daemon/gpm
 %_initng_service_hook -p hc-cron daemon/crond
@@ -94,8 +95,11 @@ fi \
 %_initng_service_hook -p lighttpd daemon/lighttpd
 %_initng_service_hook -p mDNSResponder daemon/mdns
 %_initng_service_hook -p mldonkey daemon/mldonkey
+%_initng_service_hook -p monit daemon/monit
 %_initng_service_hook -p mysql daemon/mysql
 %_initng_service_hook -p mythtv-backend daemon/mythbackend
+%_initng_service_hook -p nagios daemon/nagios
+%_initng_service_hook -p nagios-nrpe daemon/nrpe
 %_initng_service_hook -p nessusd daemon/nessusd
 %_initng_service_hook -p net-snmp daemon/snmpd
 %_initng_service_hook -p nfs-utils-clients daemon/nfsfs
@@ -125,7 +129,6 @@ fi \
 %_initng_service_hook -p vixie-cron daemon/crond
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p yum daemon/yum
-%_initng_service_hook -p nagios-nrpe daemon/nrpe
 
 %files
 %defattr(644,root,root,755)
