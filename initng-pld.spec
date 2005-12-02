@@ -3,7 +3,7 @@ Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD
 Name:		initng-pld
 Version:	0.4.7
 %define		_snap 20051202
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	http://glen.alkohol.ee/pld/initng/initscripts/initng-initscripts-%{version}-%{_snap}.tar.bz2
@@ -86,7 +86,7 @@ fi \
 %_initng_service_hook -p hdparm system/hdparm
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p imapproxy daemon/imapproxy
-%_initng_service_hook -p iptables-init net/iptables daemon/ip6tables
+%_initng_service_hook -p iptables-init daemon/iptables daemon/ip6tables
 %_initng_service_hook -p ism-cli daemon/dpcproxy
 %_initng_service_hook -p kbd daemon/console
 %_initng_service_hook -p kdenetwork-lanbrowser daemon/lisa
