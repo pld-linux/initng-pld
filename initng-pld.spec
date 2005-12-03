@@ -1,5 +1,5 @@
 Summary:	initng initscripts for PLD Linux
-Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuxa
+Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.4.7
 %define		_snap 20051202
