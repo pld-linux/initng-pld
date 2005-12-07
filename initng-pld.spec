@@ -3,11 +3,11 @@ Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.4.7
 %define		_snap 20051208
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	301456205a0e0575868e1b3e3aea11e0
+# Source0-md5:	e2be8ed16090df806d7bc0c61a1cdeb0
 URL:		http://svn.pld-linux.org/initng/
 Requires:	initng
 Requires:	rc-scripts
@@ -71,6 +71,7 @@ fi \
 %_initng_service_hook -p courier-authlib daemon/courier-authlib
 %_initng_service_hook -p courier-imap daemon/courier-imap daemon/courier-imap-ssl
 %_initng_service_hook -p cups daemon/cupsd
+%_initng_service_hook -p cyrus-imapd daemon/cyrus-imapd
 %_initng_service_hook -p cyrus-sasl-saslauthd daemon/saslauthd
 %_initng_service_hook -p daemontools daemon/svscan
 %_initng_service_hook -p dbus daemon/messagebus
@@ -92,6 +93,7 @@ fi \
 %_initng_service_hook -p klogd daemon/klogd
 %_initng_service_hook -p lighttpd daemon/lighttpd
 %_initng_service_hook -p mDNSResponder daemon/mdns
+%_initng_service_hook -p mdadm daemon/mdadm
 %_initng_service_hook -p mldonkey daemon/mldonkey
 %_initng_service_hook -p monit daemon/monit
 %_initng_service_hook -p mysql daemon/mysql
@@ -102,6 +104,7 @@ fi \
 %_initng_service_hook -p net-snmp daemon/snmpd
 %_initng_service_hook -p nfs-utils-clients daemon/nfsfs
 %_initng_service_hook -p ntp daemon/ntpd
+%_initng_service_hook -p openct daemon/openct
 %_initng_service_hook -p openldap-servers daemon/slapd
 %_initng_service_hook -p openssh-server daemon/sshd
 %_initng_service_hook -p openvpn daemon/openvpn
