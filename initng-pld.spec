@@ -2,12 +2,12 @@ Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.4.7
-%define		_snap 20051208
-Release:	0.%{_snap}.2
+%define		_snap 20051211
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	e2be8ed16090df806d7bc0c61a1cdeb0
+# Source0-md5:	63fa76b0e66c4ebe875e73e3dbe66d2e
 URL:		http://svn.pld-linux.org/initng/
 Requires:	initng
 Requires:	rc-scripts
@@ -20,10 +20,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_exec_prefix /
 
 %description
-initng initscripts for PLD.
+initng initscripts for PLD Linux.
 
 %description -l pl
-Skrypty inicjalizuj±ce initng dla PLD.
+Skrypty inicjalizuj±ce initng dla PLD Linuksa.
 
 %prep
 %setup -q -n initng-initscripts-%{version}-%{_snap}
@@ -78,6 +78,7 @@ fi \
 %_initng_service_hook -p dhcp daemon/dhcpd
 %_initng_service_hook -p dspam daemon/dspam
 %_initng_service_hook -p eventum-irc daemon/eventum-irc
+%_initng_service_hook -p exim daemon/exim
 %_initng_service_hook -p fam-standalone daemon/famd
 %_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
 %_initng_service_hook -p gpm daemon/gpm
