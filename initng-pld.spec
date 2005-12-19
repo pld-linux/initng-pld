@@ -2,12 +2,12 @@ Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.4.7
-%define		_snap 20051211
-Release:	0.%{_snap}.1
+%define		_snap 20051219
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	63fa76b0e66c4ebe875e73e3dbe66d2e
+# Source0-md5:	142d42c5384139d1cb53b3b15606391c
 URL:		http://svn.pld-linux.org/initng/
 Requires:	initng
 Requires:	rc-scripts
@@ -59,12 +59,15 @@ fi \
 
 %_initng_service_hook -p ApacheJServ-init daemon/jserv
 %_initng_service_hook -p X11-xfs daemon/xfs
+%_initng_service_hook -p acpid daemon/acpid
 %_initng_service_hook -p alsa-utils-init daemon/alsasound
+%_initng_service_hook -p anacron daemon/anacron
 %_initng_service_hook -p ap-fcgi daemon/ap-fcgi
 %_initng_service_hook -p apache daemon/httpd
 %_initng_service_hook -p apache1 daemon/apache
 %_initng_service_hook -p autofs daemon/autofs
 %_initng_service_hook -p bind daemon/named
+%_initng_service_hook -p bluez-utils-init daemon/bluetooth
 %_initng_service_hook -p bnc-init daemon/bnc
 %_initng_service_hook -p bopm daemon/bopm
 %_initng_service_hook -p clamav daemon/clamd
@@ -81,13 +84,16 @@ fi \
 %_initng_service_hook -p exim daemon/exim
 %_initng_service_hook -p fam-standalone daemon/famd
 %_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
+%_initng_service_hook -p gnustep-base daemon/gnustep
 %_initng_service_hook -p gpm daemon/gpm
+%_initng_service_hook -p hal daemon/haldaemon
 %_initng_service_hook -p hc-cron daemon/crond
 %_initng_service_hook -p hdparm system/hdparm
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p imapproxy daemon/imapproxy
 %_initng_service_hook -p iptables-init daemon/iptables daemon/ip6tables
 %_initng_service_hook -p ism-cli daemon/dpcproxy
+%_initng_service_hook -p issue-fancy daemon/issue-fancy
 %_initng_service_hook -p kbd daemon/console
 %_initng_service_hook -p kdenetwork-lanbrowser daemon/lisa
 %_initng_service_hook -p kdm daemon/kdm
@@ -105,6 +111,7 @@ fi \
 %_initng_service_hook -p net-snmp daemon/snmpd
 %_initng_service_hook -p nfs-utils-clients daemon/nfsfs
 %_initng_service_hook -p ntp daemon/ntpd
+%_initng_service_hook -p oidentd-standalone daemon/oidentd
 %_initng_service_hook -p openct daemon/openct
 %_initng_service_hook -p openldap-servers daemon/slapd
 %_initng_service_hook -p openssh-server daemon/sshd
@@ -116,11 +123,13 @@ fi \
 %_initng_service_hook -p preload daemon/preload
 %_initng_service_hook -p pure-ftpd daemon/pure-ftpd
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
-%_initng_service_hook -p rc-scripts daemon/cpusets daemon/network daemon/timezone
+%_initng_service_hook -p rc-scripts daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
 %_initng_service_hook -p rdate daemon/rdate
 %_initng_service_hook -p samba daemon/samba
+%_initng_service_hook -p smartsuite daemon/smartd
 %_initng_service_hook -p spamassassin-spamd daemon/spamd
 %_initng_service_hook -p squid daemon/squid
+%_initng_service_hook -p sqwebmail daemon/sqwebmail
 %_initng_service_hook -p syslog daemon/syslog
 %_initng_service_hook -p syslog-ng daemon/syslog-ng
 %_initng_service_hook -p sysstat daemon/sysstat
@@ -129,6 +138,7 @@ fi \
 %_initng_service_hook -p umlinux-init daemon/uml
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers
 %_initng_service_hook -p vixie-cron daemon/crond
+%_initng_service_hook -p wine daemon/wine
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p yum daemon/yum
 
