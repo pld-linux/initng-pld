@@ -3,11 +3,11 @@ Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.5.0
 %define		_snap 20051225
-Release:	0.%{_snap}.2
+Release:	0.%{_snap}.3
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	c0080ebbabfcf1823619ea805ec30720
+# Source0-md5:	09ecc4399a5a0f304a21c28373763a55
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
@@ -160,6 +160,7 @@ fi \
 
 %files
 %defattr(644,root,root,755)
+%doc README
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*.runlevel
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*/*.i
 %attr(755,root,root) %{_sbindir}/*
