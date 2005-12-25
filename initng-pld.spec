@@ -26,14 +26,18 @@ initng initscripts for PLD Linux.
 Skrypty inicjalizuj±ce initng dla PLD Linuksa.
 
 %package devel
-Summary:	tools for developing PLD initng scripts
+Summary:	Tools for developing PLD initng scripts
+Summary(pl):	Narzêdzia do rozwijania skryptów initng dla PLD
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 Requires:	vim-syntax-initng
 #Suggests:	subversion
 
 %description devel
-tools for developing PLD initng scripts.
+Tools for developing PLD initng scripts.
+
+%description devel -l pl
+Narzêdzia do rozwijania skryptów initng dla PLD.
 
 %prep
 %setup -q -n initng-initscripts-%{version}-%{_snap}
