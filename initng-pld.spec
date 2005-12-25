@@ -137,12 +137,14 @@ fi \
 %_initng_service_hook -p pound daemon/pound
 %_initng_service_hook -p preload daemon/preload
 %_initng_service_hook -p pure-ftpd daemon/pure-ftpd
+%_initng_service_hook -p quake3-server daemon/q3ded
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
 %_initng_service_hook -p rc-scripts daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
 %_initng_service_hook -p rdate daemon/rdate
 %_initng_service_hook -p samba daemon/samba
 %_initng_service_hook -p smartsuite daemon/smartd
 %_initng_service_hook -p spamassassin-spamd daemon/spamd
+%_initng_service_hook -p splashutils splashutils
 %_initng_service_hook -p squid daemon/squid
 %_initng_service_hook -p sqwebmail daemon/sqwebmail
 %_initng_service_hook -p syslog daemon/syslog
