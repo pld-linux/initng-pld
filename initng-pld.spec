@@ -1,17 +1,17 @@
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
-Version:	0.4.7
-%define		_snap 20051219
+Version:	0.5.0
+%define		_snap 20051225
 Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	142d42c5384139d1cb53b3b15606391c
+# Source0-md5:	c0080ebbabfcf1823619ea805ec30720
 URL:		http://svn.pld-linux.org/initng/
-Requires:	initng
-Requires:	rc-scripts
 Requires:	agetty
+Requires:	initng >= %{version}
+Requires:	rc-scripts
 Conflicts:	mDNSResponder < 107-2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,6 +25,16 @@ initng initscripts for PLD Linux.
 %description -l pl
 Skrypty inicjalizuj±ce initng dla PLD Linuksa.
 
+%package devel
+Summary:	tools for developing PLD initng scripts
+Group:		Development
+Requires:	%{name} = %{version}-%{release}
+Requires:	vim-syntax-initng
+#Suggests:	subversion
+
+%description devel
+tools for developing PLD initng scripts.
+
 %prep
 %setup -q -n initng-initscripts-%{version}-%{_snap}
 
@@ -33,6 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_sbindir}}
 cp -a */ *.runlevel $RPM_BUILD_ROOT%{_sysconfdir}
 install shutdown_script $RPM_BUILD_ROOT%{_sbindir}
+install migrate_rc.d-initng.i.sh test-syntax.sh $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -136,6 +147,7 @@ fi \
 %_initng_service_hook -p tenshi daemon/tenshi
 %_initng_service_hook -p tuxaator-init daemon/tuxaator
 %_initng_service_hook -p umlinux-init daemon/uml
+%_initng_service_hook -p util-linux daemon/blockdev
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers
 %_initng_service_hook -p vixie-cron daemon/crond
 %_initng_service_hook -p wine daemon/wine
@@ -147,3 +159,8 @@ fi \
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*.runlevel
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*/*.i
 %attr(755,root,root) %{_sbindir}/*
+
+%files devel
+%defattr(644,root,root,755)
+%attr(755,root,root) %{_sysconfdir}/migrate_rc.d-initng.i.sh
+%attr(755,root,root) %{_sysconfdir}/test-syntax.sh
