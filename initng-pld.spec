@@ -3,11 +3,11 @@ Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.5.0
 %define		_snap 20051225
-Release:	0.%{_snap}.3
+Release:	0.%{_snap}.4
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	09ecc4399a5a0f304a21c28373763a55
+# Source0-md5:	d0674f5538629cdff49ad22db257773a
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
@@ -139,7 +139,7 @@ fi \
 %_initng_service_hook -p pure-ftpd daemon/pure-ftpd
 %_initng_service_hook -p quake3-server daemon/q3ded
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
-%_initng_service_hook -p rc-scripts daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
+%_initng_service_hook -p rc-scripts daemon/allowlogin daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
 %_initng_service_hook -p rdate daemon/rdate
 %_initng_service_hook -p samba daemon/samba
 %_initng_service_hook -p smartsuite daemon/smartd
