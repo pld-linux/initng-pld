@@ -15,6 +15,7 @@ Requires:	rc-scripts
 Conflicts:	ApacheJServ < 1.1.2-0.79
 Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	util-linux-2.12r < 2.1
+Conflicts:	apache < 2.2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -80,10 +81,11 @@ fi \
 %_initng_service_hook -p alsa-utils-init daemon/alsasound
 %_initng_service_hook -p anacron daemon/anacron
 %_initng_service_hook -p ap-fcgi daemon/ap-fcgi
-%_initng_service_hook -p apache daemon/httpd
+%_initng_service_hook -p apache-base daemon/httpd
 %_initng_service_hook -p apache1 daemon/apache
 %_initng_service_hook -p autofs daemon/autofs
 %_initng_service_hook -p bind daemon/named
+%_initng_service_hook -p blockdev daemon/blockdev
 %_initng_service_hook -p bluez-utils-init daemon/bluetooth
 %_initng_service_hook -p bnc-init daemon/bnc
 %_initng_service_hook -p bopm daemon/bopm
