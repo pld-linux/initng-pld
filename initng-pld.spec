@@ -1,8 +1,8 @@
+%define		_snap 20051225
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.5.0
-%define		_snap 20051225
 Release:	0.%{_snap}.4
 License:	GPL
 Group:		Base
@@ -12,7 +12,9 @@ URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
 Requires:	rc-scripts
+Conflicts:	ApacheJServ < 1.1.2-0.79
 Conflicts:	mDNSResponder < 107-2.1
+Conflicts:	util-linux-2.12r < 2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -72,7 +74,7 @@ fi \
 # Usage:
 # _initng_service_hook -p [RPM package/RPM Virtual] [Initng service name(s)]
 
-%_initng_service_hook -p ApacheJServ-init daemon/jserv
+%_initng_service_hook -p ApacheJServ daemon/jserv
 %_initng_service_hook -p X11-xfs daemon/xfs
 %_initng_service_hook -p acpid daemon/acpid
 %_initng_service_hook -p alsa-utils-init daemon/alsasound
@@ -85,6 +87,7 @@ fi \
 %_initng_service_hook -p bluez-utils-init daemon/bluetooth
 %_initng_service_hook -p bnc-init daemon/bnc
 %_initng_service_hook -p bopm daemon/bopm
+%_initng_service_hook -p cherokee daemon/cherokee
 %_initng_service_hook -p clamav daemon/clamd
 %_initng_service_hook -p courier-authlib daemon/courier-authlib
 %_initng_service_hook -p courier-imap daemon/courier-imap daemon/courier-imap-ssl
@@ -114,6 +117,7 @@ fi \
 %_initng_service_hook -p kdm daemon/kdm
 %_initng_service_hook -p klogd daemon/klogd
 %_initng_service_hook -p lighttpd daemon/lighttpd
+%_initng_service_hook -p lstat daemon/lstatd
 %_initng_service_hook -p mDNSResponder daemon/mdns
 %_initng_service_hook -p mdadm daemon/mdadm
 %_initng_service_hook -p mldonkey daemon/mldonkey
@@ -125,6 +129,7 @@ fi \
 %_initng_service_hook -p nessusd daemon/nessusd
 %_initng_service_hook -p net-snmp daemon/snmpd
 %_initng_service_hook -p nfs-utils-clients daemon/nfsfs
+%_initng_service_hook -p ntop daemon/ntop
 %_initng_service_hook -p ntp daemon/ntpd
 %_initng_service_hook -p oidentd-standalone daemon/oidentd
 %_initng_service_hook -p openct daemon/openct
@@ -138,11 +143,13 @@ fi \
 %_initng_service_hook -p preload daemon/preload
 %_initng_service_hook -p pure-ftpd daemon/pure-ftpd
 %_initng_service_hook -p quake3-server daemon/q3ded
+%_initng_service_hook -p rawdevices daemon/rawdevices
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
 %_initng_service_hook -p rc-scripts daemon/allowlogin daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
 %_initng_service_hook -p rdate daemon/rdate
 %_initng_service_hook -p samba daemon/samba
 %_initng_service_hook -p smartsuite daemon/smartd
+%_initng_service_hook -p smokeping daemon/smokeping
 %_initng_service_hook -p spamassassin-spamd daemon/spamd
 %_initng_service_hook -p splashutils splashutils
 %_initng_service_hook -p squid daemon/squid
