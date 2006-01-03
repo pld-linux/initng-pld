@@ -1,13 +1,13 @@
-%define		_snap 20051225
+%define		_snap 20060103
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.5.0
-Release:	0.%{_snap}.4
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	d0674f5538629cdff49ad22db257773a
+# Source0-md5:	2d297394ccd3a8a6609b725a20b9b0dc
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
@@ -162,7 +162,6 @@ fi \
 %_initng_service_hook -p tenshi daemon/tenshi
 %_initng_service_hook -p tuxaator-init daemon/tuxaator
 %_initng_service_hook -p umlinux-init daemon/uml
-%_initng_service_hook -p util-linux daemon/blockdev
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers
 %_initng_service_hook -p vixie-cron daemon/crond
 %_initng_service_hook -p wine daemon/wine
