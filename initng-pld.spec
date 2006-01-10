@@ -83,6 +83,8 @@ fi \
 %_initng_service_hook -p ap-fcgi daemon/ap-fcgi
 %_initng_service_hook -p apache-base daemon/httpd
 %_initng_service_hook -p apache1 daemon/apache
+%_initng_service_hook -p apcupsd daemon/apcupsd
+%_initng_service_hook -p apcupsd daemon/halt
 %_initng_service_hook -p autofs daemon/autofs
 %_initng_service_hook -p bind daemon/named
 %_initng_service_hook -p blockdev daemon/blockdev
@@ -108,6 +110,7 @@ fi \
 %_initng_service_hook -p gpm daemon/gpm
 %_initng_service_hook -p hal daemon/haldaemon
 %_initng_service_hook -p hc-cron daemon/crond
+%_initng_service_hook -p hddtemp-hddtempd daemon/hddtempd
 %_initng_service_hook -p hdparm system/hdparm
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p imapproxy daemon/imapproxy
@@ -138,6 +141,7 @@ fi \
 %_initng_service_hook -p openldap-servers daemon/slapd
 %_initng_service_hook -p openssh-server daemon/sshd
 %_initng_service_hook -p openvpn daemon/openvpn
+%_initng_service_hook -p pdns daemon/pdns
 %_initng_service_hook -p polipo daemon/polipo
 %_initng_service_hook -p portmap daemon/portmap
 %_initng_service_hook -p postfix daemon/postfix
@@ -160,6 +164,7 @@ fi \
 %_initng_service_hook -p syslog-ng daemon/syslog-ng
 %_initng_service_hook -p sysstat daemon/sysstat
 %_initng_service_hook -p tenshi daemon/tenshi
+%_initng_service_hook -p tpop3d daemon/tpop3d
 %_initng_service_hook -p tuxaator-init daemon/tuxaator
 %_initng_service_hook -p umlinux-init daemon/uml
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers
