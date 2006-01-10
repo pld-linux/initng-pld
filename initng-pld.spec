@@ -83,8 +83,7 @@ fi \
 %_initng_service_hook -p ap-fcgi daemon/ap-fcgi
 %_initng_service_hook -p apache-base daemon/httpd
 %_initng_service_hook -p apache1 daemon/apache
-%_initng_service_hook -p apcupsd daemon/apcupsd
-%_initng_service_hook -p apcupsd daemon/halt
+%_initng_service_hook -p apcupsd daemon/apcupsd daemon/halt
 %_initng_service_hook -p autofs daemon/autofs
 %_initng_service_hook -p bind daemon/named
 %_initng_service_hook -p blockdev daemon/blockdev
