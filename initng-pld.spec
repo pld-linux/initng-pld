@@ -141,6 +141,7 @@ fi \
 %_initng_service_hook -p openssh-server daemon/sshd
 %_initng_service_hook -p openvpn daemon/openvpn
 %_initng_service_hook -p pdns daemon/pdns
+%_initng_service_hook -p php-fcgi-init daemon/php.fcgi
 %_initng_service_hook -p polipo daemon/polipo
 %_initng_service_hook -p portmap daemon/portmap
 %_initng_service_hook -p postfix daemon/postfix
