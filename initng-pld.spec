@@ -13,9 +13,9 @@ Requires:	agetty
 Requires:	initng >= %{version}
 Requires:	rc-scripts
 Conflicts:	ApacheJServ < 1.1.2-0.79
+Conflicts:	apache < 2.2.0
 Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	util-linux-2.12r < 2.1
-Conflicts:	apache < 2.2.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -104,6 +104,7 @@ fi \
 %_initng_service_hook -p eventum-irc daemon/eventum-irc
 %_initng_service_hook -p exim daemon/exim
 %_initng_service_hook -p fam-standalone daemon/famd
+%_initng_service_hook -p fbset daemon/fbset
 %_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
 %_initng_service_hook -p gnustep-base daemon/gnustep
 %_initng_service_hook -p gpm daemon/gpm
