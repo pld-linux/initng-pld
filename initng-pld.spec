@@ -105,6 +105,8 @@ fi \
 %_initng_service_hook -p exim daemon/exim
 %_initng_service_hook -p fam-standalone daemon/famd
 %_initng_service_hook -p fbset daemon/fbset
+%_initng_service_hook -p firewall-init daemon/firewall daemon/firewall-pre
+%_initng_service_hook -p firestarter daemon/firestarter
 %_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
 %_initng_service_hook -p gnustep-base daemon/gnustep
 %_initng_service_hook -p gpm daemon/gpm
@@ -114,6 +116,7 @@ fi \
 %_initng_service_hook -p hdparm system/hdparm
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p imapproxy daemon/imapproxy
+%_initng_service_hook -p ipfm daemon/ipfm
 %_initng_service_hook -p iptables-init daemon/iptables daemon/ip6tables
 %_initng_service_hook -p ism-cli daemon/dpcproxy
 %_initng_service_hook -p issue-fancy daemon/issue-fancy
@@ -122,6 +125,9 @@ fi \
 %_initng_service_hook -p kdm daemon/kdm
 %_initng_service_hook -p klogd daemon/klogd
 %_initng_service_hook -p lighttpd daemon/lighttpd
+%_initng_service_hook -p linux-wlan-ng daemon/wlan
+%_initng_service_hook -p lirc daemon/lircmd
+%_initng_service_hook -p lms-lmsd daemon/lmsd
 %_initng_service_hook -p lstat daemon/lstatd
 %_initng_service_hook -p mDNSResponder daemon/mdns
 %_initng_service_hook -p mdadm daemon/mdadm
@@ -137,11 +143,13 @@ fi \
 %_initng_service_hook -p ntop daemon/ntop
 %_initng_service_hook -p ntp daemon/ntpd
 %_initng_service_hook -p oidentd-standalone daemon/oidentd
+%_initng_service_hook -p onetkonekt daemon/onetkonekt.pl
 %_initng_service_hook -p openct daemon/openct
 %_initng_service_hook -p openldap-servers daemon/slapd
 %_initng_service_hook -p openssh-server daemon/sshd
 %_initng_service_hook -p openvpn daemon/openvpn
 %_initng_service_hook -p pdns daemon/pdns
+%_initng_service_hook -p pdnsd daemon/pdnsd
 %_initng_service_hook -p php-fcgi-init daemon/php.fcgi
 %_initng_service_hook -p polipo daemon/polipo
 %_initng_service_hook -p portmap daemon/portmap
@@ -154,6 +162,8 @@ fi \
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
 %_initng_service_hook -p rc-scripts daemon/allowlogin daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
 %_initng_service_hook -p rdate daemon/rdate
+%_initng_service_hook -p rp-pppoe-relay daemon/pppoe-relay
+%_initng_service_hook -p rp-pppoe-server daemon/pppoe-server
 %_initng_service_hook -p samba daemon/samba
 %_initng_service_hook -p smartsuite daemon/smartd
 %_initng_service_hook -p smokeping daemon/smokeping
@@ -161,6 +171,7 @@ fi \
 %_initng_service_hook -p splashutils splashutils
 %_initng_service_hook -p squid daemon/squid
 %_initng_service_hook -p sqwebmail daemon/sqwebmail
+%_initng_service_hook -p swapd daemon/swapd
 %_initng_service_hook -p syslog daemon/syslog
 %_initng_service_hook -p syslog-ng daemon/syslog-ng
 %_initng_service_hook -p sysstat daemon/sysstat
@@ -169,6 +180,7 @@ fi \
 %_initng_service_hook -p tuxaator-init daemon/tuxaator
 %_initng_service_hook -p umlinux-init daemon/uml
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers
+%_initng_service_hook -p vfmg daemon/vfmg
 %_initng_service_hook -p vixie-cron daemon/crond
 %_initng_service_hook -p wine daemon/wine
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
