@@ -85,6 +85,7 @@ fi \
 %_initng_service_hook -p apache1 daemon/apache
 %_initng_service_hook -p apcupsd daemon/apcupsd daemon/halt
 %_initng_service_hook -p autofs daemon/autofs
+%_initng_service_hook -p bigsister daemon/bigsister
 %_initng_service_hook -p bind daemon/named
 %_initng_service_hook -p blockdev daemon/blockdev
 %_initng_service_hook -p bluez-utils-init daemon/bluetooth
@@ -108,6 +109,7 @@ fi \
 %_initng_service_hook -p firewall-init daemon/firewall daemon/firewall-pre
 %_initng_service_hook -p firestarter daemon/firestarter
 %_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
+%_initng_service_hook -p freeradius daemon/freeradius
 %_initng_service_hook -p gnustep-base daemon/gnustep
 %_initng_service_hook -p gpm daemon/gpm
 %_initng_service_hook -p hal daemon/haldaemon
@@ -140,6 +142,7 @@ fi \
 %_initng_service_hook -p nessusd daemon/nessusd
 %_initng_service_hook -p net-snmp daemon/snmpd
 %_initng_service_hook -p nfs-utils-clients daemon/nfsfs
+%_initng_service_hook -p noip daemon/noip
 %_initng_service_hook -p ntop daemon/ntop
 %_initng_service_hook -p ntp daemon/ntpd
 %_initng_service_hook -p oidentd-standalone daemon/oidentd
