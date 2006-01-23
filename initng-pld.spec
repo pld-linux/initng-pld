@@ -168,6 +168,7 @@ fi \
 %_initng_service_hook -p rp-pppoe-relay daemon/pppoe-relay
 %_initng_service_hook -p rp-pppoe-server daemon/pppoe-server
 %_initng_service_hook -p samba daemon/samba
+%_initng_service_hook -p lm_sensors-sensord daemon/sensors
 %_initng_service_hook -p smartsuite daemon/smartd
 %_initng_service_hook -p smokeping daemon/smokeping
 %_initng_service_hook -p spamassassin-spamd daemon/spamd
