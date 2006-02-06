@@ -3,7 +3,7 @@ Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.5.2
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
@@ -17,6 +17,7 @@ Conflicts:	apache < 2.2.0
 Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	spamassassin-spamd < 3.1.0-5.3
 Conflicts:	util-linux-2.12r < 2.1
+Conflicts:	initng-0.5.3 < 0.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -50,6 +51,7 @@ Narzêdzia do rozwijania skryptów initng dla PLD.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_sbindir}}
 cp -a */ *.runlevel $RPM_BUILD_ROOT%{_sysconfdir}
+echo 'system' > $RPM_BUILD_ROOT%{_sysconfdir}/default.runlevel
 install shutdown_script $RPM_BUILD_ROOT%{_sbindir}
 install migrate_rc.d-initng.i.sh test-syntax.sh $RPM_BUILD_ROOT%{_sysconfdir}
 
@@ -195,7 +197,9 @@ fi \
 %defattr(644,root,root,755)
 %doc README
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*.runlevel
-%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*/*.i
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/daemon
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/system
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/net
 %attr(755,root,root) %{_sbindir}/*
 
 %files devel
