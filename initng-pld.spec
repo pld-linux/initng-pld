@@ -1,13 +1,13 @@
-%define		_snap 20060130
+%define		_snap 20060207
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
-Version:	0.5.2
-Release:	0.%{_snap}.2
+Version:	0.5.3
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	31264366fd2ffa66e00ad6c689b98634
+# Source0-md5:	18534db8478ae874c6057278f7425333
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
@@ -77,6 +77,7 @@ fi \
 
 # Usage:
 # _initng_service_hook -p [RPM package/RPM Virtual] [Initng service name(s)]
+# please sort the list (in vim: select block with shift+v and :!sort)
 
 %_initng_service_hook -p ApacheJServ daemon/jserv
 %_initng_service_hook -p X11-xfs daemon/xfs
@@ -94,6 +95,7 @@ fi \
 %_initng_service_hook -p bluez-utils-init daemon/bluetooth
 %_initng_service_hook -p bnc-init daemon/bnc
 %_initng_service_hook -p bopm daemon/bopm
+%_initng_service_hook -p cancd daemon/cancd
 %_initng_service_hook -p cherokee daemon/cherokee
 %_initng_service_hook -p clamav daemon/clamd
 %_initng_service_hook -p courier-authlib daemon/courier-authlib
@@ -103,16 +105,17 @@ fi \
 %_initng_service_hook -p cyrus-sasl-saslauthd daemon/saslauthd
 %_initng_service_hook -p daemontools daemon/svscan
 %_initng_service_hook -p dbus daemon/messagebus
+%_initng_service_hook -p dgee daemon/dgee
 %_initng_service_hook -p dhcp daemon/dhcpd
 %_initng_service_hook -p dspam daemon/dspam
 %_initng_service_hook -p eventum-irc daemon/eventum-irc
 %_initng_service_hook -p exim daemon/exim
 %_initng_service_hook -p fam-standalone daemon/famd
 %_initng_service_hook -p fbset daemon/fbset
-%_initng_service_hook -p firewall-init daemon/firewall daemon/firewall-pre
 %_initng_service_hook -p firestarter daemon/firestarter
-%_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
+%_initng_service_hook -p firewall-init daemon/firewall daemon/firewall-pre
 %_initng_service_hook -p freeradius daemon/freeradius
+%_initng_service_hook -p freevo-boot daemon/freevo daemon/freevo_dep daemon/freevo_recordserver daemon/freevo_webserver
 %_initng_service_hook -p gnustep-base daemon/gnustep
 %_initng_service_hook -p gpm daemon/gpm
 %_initng_service_hook -p hal daemon/haldaemon
@@ -132,10 +135,12 @@ fi \
 %_initng_service_hook -p lighttpd daemon/lighttpd
 %_initng_service_hook -p linux-wlan-ng daemon/wlan
 %_initng_service_hook -p lirc daemon/lircmd
+%_initng_service_hook -p lm_sensors-sensord daemon/sensors
 %_initng_service_hook -p lms-lmsd daemon/lmsd
 %_initng_service_hook -p lstat daemon/lstatd
 %_initng_service_hook -p mDNSResponder daemon/mdns
 %_initng_service_hook -p mdadm daemon/mdadm
+%_initng_service_hook -p memcached daemon/memcached
 %_initng_service_hook -p mldonkey daemon/mldonkey
 %_initng_service_hook -p monit daemon/monit
 %_initng_service_hook -p mysql daemon/mysql
@@ -144,6 +149,7 @@ fi \
 %_initng_service_hook -p nagios-nrpe daemon/nrpe
 %_initng_service_hook -p nessusd daemon/nessusd
 %_initng_service_hook -p net-snmp daemon/snmpd
+%_initng_service_hook -p netconsole daemon/netconsole
 %_initng_service_hook -p nfs-utils-clients daemon/nfsfs
 %_initng_service_hook -p noip daemon/noip
 %_initng_service_hook -p ntop daemon/ntop
@@ -171,7 +177,6 @@ fi \
 %_initng_service_hook -p rp-pppoe-relay daemon/pppoe-relay
 %_initng_service_hook -p rp-pppoe-server daemon/pppoe-server
 %_initng_service_hook -p samba daemon/samba
-%_initng_service_hook -p lm_sensors-sensord daemon/sensors
 %_initng_service_hook -p smartsuite daemon/smartd
 %_initng_service_hook -p smokeping daemon/smokeping
 %_initng_service_hook -p spamassassin-spamd daemon/spamd
@@ -186,7 +191,7 @@ fi \
 %_initng_service_hook -p tpop3d daemon/tpop3d
 %_initng_service_hook -p tuxaator-init daemon/tuxaator
 %_initng_service_hook -p umlinux-init daemon/uml
-%_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers
+%_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers daemon/vrootdevices
 %_initng_service_hook -p vfmg daemon/vfmg
 %_initng_service_hook -p vixie-cron daemon/crond
 %_initng_service_hook -p wine daemon/wine
