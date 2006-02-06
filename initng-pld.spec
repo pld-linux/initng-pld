@@ -16,8 +16,8 @@ Conflicts:	ApacheJServ < 1.1.2-0.79
 Conflicts:	apache < 2.2.0
 Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	spamassassin-spamd < 3.1.0-5.3
-Conflicts:	util-linux-2.12r < 2.1
-Conflicts:	initng-0.5.3 < 0.2
+Conflicts:	util-linux < 2.12r-2.1
+Conflicts:	initng < 0.5.3-0.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
