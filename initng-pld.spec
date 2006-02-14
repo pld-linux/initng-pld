@@ -1,4 +1,4 @@
-%define		_snap 20060207
+%define		_snap 20060214
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
@@ -7,7 +7,7 @@ Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	18534db8478ae874c6057278f7425333
+# Source0-md5:	617b1105f77bfb645f1e16bca30dc29c
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
@@ -79,6 +79,7 @@ fi \
 # _initng_service_hook -p [RPM package/RPM Virtual] [Initng service name(s)]
 # please sort the list (in vim: select block with shift+v and :!sort)
 
+
 %_initng_service_hook -p ApacheJServ daemon/jserv
 %_initng_service_hook -p X11-xfs daemon/xfs
 %_initng_service_hook -p acpid daemon/acpid
@@ -123,6 +124,7 @@ fi \
 %_initng_service_hook -p hddtemp-hddtempd daemon/hddtempd
 %_initng_service_hook -p hdparm system/hdparm
 %_initng_service_hook -p hotplug daemon/hotplug
+%_initng_service_hook -p htb.init daemon/htb
 %_initng_service_hook -p imapproxy daemon/imapproxy
 %_initng_service_hook -p ipfm daemon/ipfm
 %_initng_service_hook -p iptables-init daemon/iptables daemon/ip6tables
@@ -160,6 +162,7 @@ fi \
 %_initng_service_hook -p openldap-servers daemon/slapd
 %_initng_service_hook -p openssh-server daemon/sshd
 %_initng_service_hook -p openvpn daemon/openvpn
+%_initng_service_hook -p p0f daemon/p0f
 %_initng_service_hook -p pdns daemon/pdns
 %_initng_service_hook -p pdnsd daemon/pdnsd
 %_initng_service_hook -p php-fcgi-init daemon/php.fcgi
@@ -197,7 +200,6 @@ fi \
 %_initng_service_hook -p wine daemon/wine
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p yum daemon/yum
-
 %files
 %defattr(644,root,root,755)
 %doc README
