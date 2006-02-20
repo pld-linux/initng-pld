@@ -162,8 +162,7 @@ fi \
 %_initng_service_hook -p hc-cron daemon/crond
 %_initng_service_hook -p hddtemp-hddtempd daemon/hddtempd
 %_initng_service_hook -p hdparm system/hdparm
-%_initng_service_hook -p heimdal-server daemon/kdc
-%_initng_service_hook -p heimdal-server daemon/kpasswdd
+%_initng_service_hook -p heimdal-server daemon/kdc daemon/kpasswdd
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p htb.init daemon/htb
 %_initng_service_hook -p htpdate daemon/htpdate
@@ -271,8 +270,7 @@ fi \
 %_initng_service_hook -p qpopper-standalone daemon/qpopperd
 %_initng_service_hook -p quake2-server daemon/quake2-server
 %_initng_service_hook -p quake3-server daemon/q3ded
-%_initng_service_hook -p quakeforge-servers daemon/nq-serverd
-%_initng_service_hook -p quakeforge-servers daemon/qw-serverd
+%_initng_service_hook -p quakeforge-servers daemon/nq-serverd daemon/qw-serverd
 %_initng_service_hook -p quota-rquotad daemon/rquotad
 %_initng_service_hook -p radvd daemon/radvd
 %_initng_service_hook -p rarpd daemon/rarpd
@@ -296,7 +294,6 @@ fi \
 %_initng_service_hook -p smokeping daemon/smokeping
 %_initng_service_hook -p smstools daemon/smsd
 %_initng_service_hook -p snort daemon/snort
-%_initng_service_hook -p spamassassin-spamd daemon/spamassassin
 %_initng_service_hook -p spamassassin-spamd daemon/spamd
 %_initng_service_hook -p spfd daemon/spfd
 %_initng_service_hook -p splashutils splashutils
@@ -329,9 +326,7 @@ fi \
 %_initng_service_hook -p wwwoffle daemon/wwwoffle
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p ypbind-mt daemon/ypbind
-%_initng_service_hook -p ypserv daemon/rpc.yppasswdd
-%_initng_service_hook -p ypserv daemon/ypserv
-%_initng_service_hook -p ypserv daemon/ypxfrd
+%_initng_service_hook -p ypserv daemon/rpc.yppasswdd daemon/ypserv daemon/ypxfrd
 %_initng_service_hook -p yum daemon/yum
 
 %files
