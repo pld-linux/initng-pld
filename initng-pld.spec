@@ -101,6 +101,7 @@ fi \
 %_initng_service_hook -p at daemon/atd
 %_initng_service_hook -p athcool daemon/athcool
 %_initng_service_hook -p atsar daemon/atsar
+%_initng_service_hook -p audit daemon/auditd
 %_initng_service_hook -p aumix-preserve-settings daemon/aumix
 %_initng_service_hook -p autofs daemon/autofs
 %_initng_service_hook -p autolog daemon/autolog
