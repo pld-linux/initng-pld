@@ -95,6 +95,7 @@ fi \
 %_initng_service_hook -p apache1 daemon/apache
 %_initng_service_hook -p apcupsd daemon/apcupsd daemon/halt
 %_initng_service_hook -p apinger daemon/apinger
+%_initng_service_hook -p apmd daemon/apmd
 %_initng_service_hook -p arpd daemon/arpd
 %_initng_service_hook -p arpwatch daemon/arpwatch
 %_initng_service_hook -p asterisk daemon/asterisk
@@ -205,6 +206,7 @@ fi \
 %_initng_service_hook -p lsvpd daemon/lsvpd
 %_initng_service_hook -p lvcool daemon/lvcool
 %_initng_service_hook -p mDNSResponder daemon/mdns
+%_initng_service_hook -p mailgraph daemon/mailgraph
 %_initng_service_hook -p mailman daemon/mailman
 %_initng_service_hook -p maradns daemon/maradns
 %_initng_service_hook -p maradns-zoneserver daemon/zoneserver
@@ -220,7 +222,9 @@ fi \
 %_initng_service_hook -p mmtcpfwd daemon/mmtcpfwd
 %_initng_service_hook -p monit daemon/monit
 %_initng_service_hook -p monkey daemon/monkeyd
+%_initng_service_hook -p mrt daemon/mrtd
 %_initng_service_hook -p mserver daemon/mserver
+%_initng_service_hook -p muddleftpd daemon/muddleftpd
 %_initng_service_hook -p munin-node daemon/munin-node
 %_initng_service_hook -p mysql daemon/mysql
 %_initng_service_hook -p mythtv-backend daemon/mythbackend
@@ -257,6 +261,7 @@ fi \
 %_initng_service_hook -p php-fcgi-init daemon/php.fcgi
 %_initng_service_hook -p plptools daemon/psion
 %_initng_service_hook -p polipo daemon/polipo
+%_initng_service_hook -p pop-before-smtp daemon/popbsmtp
 %_initng_service_hook -p portfwd daemon/portfwd
 %_initng_service_hook -p portmap daemon/portmap
 %_initng_service_hook -p portsentry daemon/portsentry
@@ -266,6 +271,7 @@ fi \
 %_initng_service_hook -p poweracpid daemon/poweracpid
 %_initng_service_hook -p preload daemon/preload
 %_initng_service_hook -p privoxy daemon/privoxy
+%_initng_service_hook -p proftpd-standalone daemon/proftpd
 %_initng_service_hook -p protolog daemon/protolog
 %_initng_service_hook -p pulsard daemon/pulsard
 %_initng_service_hook -p pure-ftpd daemon/pure-ftpd
@@ -335,6 +341,7 @@ fi \
 %_initng_service_hook -p ypbind-mt daemon/ypbind
 %_initng_service_hook -p ypserv daemon/rpc.yppasswdd daemon/ypserv daemon/ypxfrd
 %_initng_service_hook -p yum daemon/yum
+%_initng_service_hook -p zmailer daemon/zmailer
 
 %files
 %defattr(644,root,root,755)
