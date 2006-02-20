@@ -272,6 +272,7 @@ fi \
 %_initng_service_hook -p pyrss daemon/pyrss
 %_initng_service_hook -p qpopper-ssl-standalone daemon/qpoppersd
 %_initng_service_hook -p qpopper-standalone daemon/qpopperd
+%_initng_service_hook -p quagga daemon/zebra
 %_initng_service_hook -p quake2-server daemon/quake2-server
 %_initng_service_hook -p quake3-server daemon/q3ded
 %_initng_service_hook -p quakeforge-servers daemon/nq-serverd daemon/qw-serverd
@@ -293,6 +294,7 @@ fi \
 %_initng_service_hook -p rwalld daemon/rpc.rwalld
 %_initng_service_hook -p rwho daemon/rwhod
 %_initng_service_hook -p samba daemon/samba
+%_initng_service_hook -p sendmail daemon/sendmail
 %_initng_service_hook -p shaperd.2 daemon/shaperd
 %_initng_service_hook -p smartsuite daemon/smartd
 %_initng_service_hook -p smokeping daemon/smokeping
@@ -320,6 +322,7 @@ fi \
 %_initng_service_hook -p util-vserver-init daemon/vprocunhide daemon/vservers daemon/vrootdevices
 %_initng_service_hook -p vfmg daemon/vfmg
 %_initng_service_hook -p vixie-cron daemon/crond
+%_initng_service_hook -p vm-pop3d-standalone daemon/pop3d
 %_initng_service_hook -p vsftpd-standalone daemon/vsftpd
 %_initng_service_hook -p vtun daemon/vtund
 %_initng_service_hook -p wanpipe daemon/wanrouter
