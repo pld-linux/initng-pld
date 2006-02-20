@@ -82,6 +82,7 @@ fi \
 %_initng_service_hook -p ApacheJServ daemon/jserv
 %_initng_service_hook -p Canna daemon/canna
 %_initng_service_hook -p LPRng daemon/lpd
+%_initng_service_hook -p X11-xdm daemon/xdm
 %_initng_service_hook -p X11-xfs daemon/xfs
 %_initng_service_hook -p Zope daemon/z2.py
 %_initng_service_hook -p Zope3 daemon/zope3
@@ -100,7 +101,6 @@ fi \
 %_initng_service_hook -p at daemon/atd
 %_initng_service_hook -p athcool daemon/athcool
 %_initng_service_hook -p atsar daemon/atsar
-%_initng_service_hook -p audit daemon//sbin/auditd
 %_initng_service_hook -p aumix-preserve-settings daemon/aumix
 %_initng_service_hook -p autofs daemon/autofs
 %_initng_service_hook -p autolog daemon/autolog
@@ -174,6 +174,7 @@ fi \
 %_initng_service_hook -p ipac-ng daemon/ipac-ng
 %_initng_service_hook -p ipband daemon/ipband
 %_initng_service_hook -p ipfm daemon/ipfm
+%_initng_service_hook -p iplog daemon/iplog
 %_initng_service_hook -p ippl daemon/ippl
 %_initng_service_hook -p iptables-init daemon/iptables daemon/ip6tables
 %_initng_service_hook -p ipxripd daemon/ipxripd
@@ -204,6 +205,8 @@ fi \
 %_initng_service_hook -p lvcool daemon/lvcool
 %_initng_service_hook -p mDNSResponder daemon/mdns
 %_initng_service_hook -p mailman daemon/mailman
+%_initng_service_hook -p maradns daemon/maradns
+%_initng_service_hook -p maradns-zoneserver daemon/zoneserver
 %_initng_service_hook -p mars_nwe daemon/ncpserv
 %_initng_service_hook -p mcserv daemon/mcserv
 %_initng_service_hook -p mdadm daemon/mdadm
