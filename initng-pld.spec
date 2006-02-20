@@ -79,7 +79,6 @@ fi \
 # _initng_service_hook -p [RPM package/RPM Virtual] [Initng service name(s)]
 # please sort the list (in vim: select block with shift+v and :!sort)
 
-
 %_initng_service_hook -p ApacheJServ daemon/jserv
 %_initng_service_hook -p X11-xfs daemon/xfs
 %_initng_service_hook -p acpid daemon/acpid
@@ -174,6 +173,7 @@ fi \
 %_initng_service_hook -p pure-ftpd daemon/pure-ftpd
 %_initng_service_hook -p quake3-server daemon/q3ded
 %_initng_service_hook -p rawdevices daemon/rawdevices
+%_initng_service_hook -p rbldnsd daemon/rbldnsd
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
 %_initng_service_hook -p rc-scripts daemon/allowlogin daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
 %_initng_service_hook -p rdate daemon/rdate
@@ -200,6 +200,7 @@ fi \
 %_initng_service_hook -p wine daemon/wine
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p yum daemon/yum
+
 %files
 %defattr(644,root,root,755)
 %doc README
