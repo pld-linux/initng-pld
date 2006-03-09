@@ -1,13 +1,13 @@
-%define		_snap 20060301
+%define		_snap 20060309
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
-Version:	0.5.4
-Release:	0.%{_snap}.2
+Version:	0.5.5
+Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	4cee325a5db005f1e177a75fa72aca26
+# Source0-md5:	70683cb702d96d6438027fc741800af6
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
