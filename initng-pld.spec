@@ -2,12 +2,12 @@
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
-Version:	0.5.5
+Version:	0.5.5.1
 Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	77f266aeed6076081c27d7009bcae5d9
+# Source0-md5:	be5b70ae8c82c5f27212492868555513
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
@@ -52,7 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_sbindir}}
 cp -a */ *.runlevel $RPM_BUILD_ROOT%{_sysconfdir}
 echo 'system' > $RPM_BUILD_ROOT%{_sysconfdir}/default.runlevel
-install shutdown_script $RPM_BUILD_ROOT%{_sbindir}
 install migrate_rc.d-initng.i.sh test-syntax.sh $RPM_BUILD_ROOT%{_sysconfdir}
 
 %clean
@@ -350,7 +349,6 @@ fi \
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/daemon
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/system
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/net
-%attr(755,root,root) %{_sbindir}/*
 
 %files devel
 %defattr(644,root,root,755)
