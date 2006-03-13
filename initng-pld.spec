@@ -1,4 +1,4 @@
-%define		_snap 20060309
+%define		_snap 20060313
 Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
@@ -7,7 +7,7 @@ Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}-%{_snap}.tar.bz2
-# Source0-md5:	70683cb702d96d6438027fc741800af6
+# Source0-md5:	77f266aeed6076081c27d7009bcae5d9
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= %{version}
@@ -163,7 +163,7 @@ fi \
 %_initng_service_hook -p hal daemon/haldaemon
 %_initng_service_hook -p hc-cron daemon/crond
 %_initng_service_hook -p hddtemp-hddtempd daemon/hddtempd
-%_initng_service_hook -p hdparm system/hdparm
+%_initng_service_hook -p hdparm daemon/hdparm
 %_initng_service_hook -p heimdal-server daemon/kdc daemon/kpasswdd
 %_initng_service_hook -p hotplug daemon/hotplug
 %_initng_service_hook -p htb.init daemon/htb
