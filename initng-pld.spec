@@ -128,7 +128,7 @@ fi \
 %_initng_service_hook -p courier-imap daemon/courier-imap daemon/courier-imap-ssl
 %_initng_service_hook -p cpudyn daemon/cpudynd
 %_initng_service_hook -p cpufreqd daemon/cpufreqd
-%_initng_service_hook -p cups daemon/cupsd
+%_initng_service_hook -p cups daemon/cups
 %_initng_service_hook -p cyrus-imapd daemon/cyrus-imapd
 %_initng_service_hook -p cyrus-sasl-saslauthd daemon/saslauthd
 %_initng_service_hook -p daemontools daemon/svscan
