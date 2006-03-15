@@ -299,7 +299,7 @@ fi \
 %_initng_service_hook -p rusersd daemon/rpc.rusersd
 %_initng_service_hook -p rwalld daemon/rpc.rwalld
 %_initng_service_hook -p rwho daemon/rwhod
-%_initng_service_hook -p samba daemon/samba
+%_initng_service_hook -p samba daemon/smb
 %_initng_service_hook -p sendmail daemon/sendmail
 %_initng_service_hook -p shaperd.2 daemon/shaperd
 %_initng_service_hook -p smartsuite daemon/smartd
