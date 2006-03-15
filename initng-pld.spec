@@ -258,7 +258,7 @@ fi \
 %_initng_service_hook -p pcsc-lite daemon/pcscd
 %_initng_service_hook -p pdns daemon/pdns
 %_initng_service_hook -p pdnsd daemon/pdnsd
-%_initng_service_hook -p php-fcgi-init daemon/php.fcgi
+%_initng_service_hook -p php-fcgi-init daemon/php-fcgi
 %_initng_service_hook -p plptools daemon/psion
 %_initng_service_hook -p polipo daemon/polipo
 %_initng_service_hook -p pop-before-smtp daemon/popbsmtp
