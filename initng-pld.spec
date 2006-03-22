@@ -8,7 +8,7 @@ Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
-# Source0-md5:	2d5c8910de8d168bc30b60012f4f35b8
+# Source0-md5:	c0776e9f2555b150ae999daa1f7ada26
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= 0.6.0
