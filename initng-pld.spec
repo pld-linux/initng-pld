@@ -4,14 +4,15 @@ Summary:	initng initscripts for PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.5.5
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
 # Source0-md5:	f68a6c1a42dc047dd3b37724e1c3007e
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
-Requires:	initng >= %{version}
+Requires:	initng >= 0.6.0
+Requires:	initng-tools
 Requires:	rc-scripts
 Conflicts:	ApacheJServ < 1.1.2-0.79
 Conflicts:	apache < 2.2.0
