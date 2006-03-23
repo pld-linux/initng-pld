@@ -12,6 +12,7 @@ Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= 0.6.0
+# initng-tools can be built from initng-ifiles.spec
 Requires:	initng-tools
 Requires:	rc-scripts
 Conflicts:	ApacheJServ < 1.1.2-0.79
@@ -19,7 +20,6 @@ Conflicts:	apache < 2.2.0
 Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	spamassassin-spamd < 3.1.0-5.3
 Conflicts:	util-linux < 2.12r-2.1
-Conflicts:	initng < 0.5.3-0.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
