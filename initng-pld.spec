@@ -237,6 +237,7 @@ fi \
 %_initng_service_hook -p net-snmp-snmptrapd daemon/snmptrapd
 %_initng_service_hook -p netconsole daemon/netconsole
 %_initng_service_hook -p netplug daemon/netplugd
+%_initng_service_hook -p nfs-utils daemon/nfs
 %_initng_service_hook -p nfs-utils-clients daemon/nfsfs
 %_initng_service_hook -p nfs-utils-lock daemon/nfslock
 %_initng_service_hook -p niceshaper daemon/niceshaper
