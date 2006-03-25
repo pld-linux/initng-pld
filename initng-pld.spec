@@ -127,6 +127,7 @@ fi \
 %_initng_service_hook -p conserver daemon/conserver
 %_initng_service_hook -p courier-authlib daemon/courier-authlib
 %_initng_service_hook -p courier-imap daemon/courier-imap daemon/courier-imap-ssl
+%_initng_service_hook -p courier-imap-pop3 daemon/courier-pop3
 %_initng_service_hook -p cpudyn daemon/cpudynd
 %_initng_service_hook -p cpufreqd daemon/cpufreqd
 %_initng_service_hook -p cups daemon/cups
@@ -335,6 +336,7 @@ fi \
 %_initng_service_hook -p wanpipe daemon/wanrouter
 %_initng_service_hook -p watchdog daemon/watchdog
 %_initng_service_hook -p wccpd daemon/wccpd
+%_initng_service_hook -p webmin daemon/webmin
 %_initng_service_hook -p whoson-server daemon/whosond
 %_initng_service_hook -p wine daemon/wine
 %_initng_service_hook -p wwwoffle daemon/wwwoffle
