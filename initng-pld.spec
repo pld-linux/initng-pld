@@ -74,6 +74,7 @@ fi \
 if [ "$1" = "0" ] || [ "$2" = "0" ]; then \
 	for s in %*; do \
 		/sbin/ng-update del $s \
+		/sbin/ngc -z $s \
 	done \
 fi \
 
