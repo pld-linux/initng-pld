@@ -1,6 +1,7 @@
 %define		_snap 20060504
 %define		_extraver %{nil}
 Summary:	initng initscripts for PLD Linux
+Summary(de):	Initng Init Skripts für PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.6.1
@@ -30,11 +31,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 initng initscripts for PLD Linux.
 
+%description -l de
+Initng Init Skripte für PLD Linux.
+
 %description -l pl
 Skrypty inicjalizuj±ce initng dla PLD Linuksa.
 
 %package devel
 Summary:	Tools for developing PLD initng scripts
+Summary(de):	Tools zur PLD Initng Skripts Entwicklung
 Summary(pl):	Narzêdzia do rozwijania skryptów initng dla PLD
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
@@ -43,6 +48,9 @@ Requires:	vim-syntax-initng
 
 %description devel
 Tools for developing PLD initng scripts.
+
+%description devel -l de
+Tools zur PLD Initng Skripts Entwicklung.
 
 %description devel -l pl
 Narzêdzia do rozwijania skryptów initng dla PLD.
