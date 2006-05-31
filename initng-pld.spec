@@ -150,7 +150,9 @@ fi \
 %_initng_service_hook -p dgee daemon/dgee
 %_initng_service_hook -p dhcp daemon/dhcpd
 %_initng_service_hook -p dhcp-relay daemon/dhcp-relay
+%_initng_service_hook -p discover daemon/discover
 %_initng_service_hook -p distcc-standalone daemon/distcc
+%_initng_service_hook -p dkms daemon/dkms_autoinstaller
 %_initng_service_hook -p dnsmasq daemon/dnsmasq
 %_initng_service_hook -p drbdsetup daemon/drbd
 %_initng_service_hook -p dspam daemon/dspam
@@ -268,6 +270,7 @@ fi \
 %_initng_service_hook -p p0f daemon/p0f
 %_initng_service_hook -p p3scan daemon/p3scan
 %_initng_service_hook -p pbbuttonsd daemon/pbbuttonsd
+%_initng_service_hook -p pcmcia-cs daemon/pcmcia
 %_initng_service_hook -p pcsc-lite daemon/pcscd
 %_initng_service_hook -p pdns daemon/pdns
 %_initng_service_hook -p pdnsd daemon/pdnsd
