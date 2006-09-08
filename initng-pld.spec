@@ -1,4 +1,4 @@
-%define		_snap 20060608
+%define		_snap 20060908
 %define		_extraver %{nil}
 Summary:	initng initscripts for PLD Linux
 Summary(de):	Initng Init Skripts für PLD Linux
@@ -9,7 +9,7 @@ Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
-# Source0-md5:	1cecb955ced7a790a508c925e13ae878
+# Source0-md5:	ab9a62ff2536d1c7589b7c6dfbce1c85
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= 0.6.1
@@ -22,6 +22,7 @@ Conflicts:	courier-imap < 4.0.5
 Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	spamassassin-spamd < 3.1.0-5.3
 Conflicts:	util-linux < 2.12r-2.1
+Conflicts:	wine < 0.9.20-1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -92,6 +93,7 @@ fi \
 
 %_initng_service_hook -p ApacheJServ daemon/jserv
 %_initng_service_hook -p Canna daemon/canna
+%_initng_service_hook -p EMCpower daemon/powerpath
 %_initng_service_hook -p LPRng daemon/lpd
 %_initng_service_hook -p X11-xdm daemon/xdm
 %_initng_service_hook -p X11-xfs daemon/xfs
@@ -119,6 +121,7 @@ fi \
 %_initng_service_hook -p autolog daemon/autolog
 %_initng_service_hook -p bigsister daemon/bigsister
 %_initng_service_hook -p bind daemon/named
+%_initng_service_hook -p binfmt-detector daemon/binfmt-detector
 %_initng_service_hook -p bircd daemon/ircd
 %_initng_service_hook -p bird-ipv4 daemon/bird-ipv4
 %_initng_service_hook -p bird-ipv6 daemon/bird-ipv6
@@ -234,6 +237,7 @@ fi \
 %_initng_service_hook -p mksd daemon/mksd
 %_initng_service_hook -p mldonkey daemon/mldonkey
 %_initng_service_hook -p mmtcpfwd daemon/mmtcpfwd
+%_initng_service_hook -p mon daemon/mon
 %_initng_service_hook -p monit daemon/monit
 %_initng_service_hook -p monkey daemon/monkeyd
 %_initng_service_hook -p mrt daemon/mrtd
@@ -243,7 +247,9 @@ fi \
 %_initng_service_hook -p mysql daemon/mysql
 %_initng_service_hook -p mythtv-backend daemon/mythbackend
 %_initng_service_hook -p nagios daemon/nagios
+%_initng_service_hook -p nagios-grapher daemon/nagios-grapher
 %_initng_service_hook -p nagios-nrpe daemon/nrpe
+%_initng_service_hook -p nagios-nsca daemon/nagios-nsca
 %_initng_service_hook -p nessusd daemon/nessusd
 %_initng_service_hook -p net-snmp daemon/snmpd
 %_initng_service_hook -p net-snmp-snmptrapd daemon/snmptrapd
@@ -257,6 +263,7 @@ fi \
 %_initng_service_hook -p nscd daemon/nscd
 %_initng_service_hook -p ntop daemon/ntop
 %_initng_service_hook -p ntp daemon/ntpd
+%_initng_service_hook -p ntp-client daemon/ntp
 %_initng_service_hook -p nut daemon/upsd
 %_initng_service_hook -p nut-client daemon/upsmon
 %_initng_service_hook -p oidentd-standalone daemon/oidentd
@@ -283,6 +290,7 @@ fi \
 %_initng_service_hook -p portsentry daemon/portsentry
 %_initng_service_hook -p postfix daemon/postfix
 %_initng_service_hook -p postgresql daemon/postmaster
+%_initng_service_hook -p postgrey daemon/postgrey
 %_initng_service_hook -p pound daemon/pound
 %_initng_service_hook -p poweracpid daemon/poweracpid
 %_initng_service_hook -p preload daemon/preload
@@ -316,6 +324,7 @@ fi \
 %_initng_service_hook -p rwalld daemon/rpc.rwalld
 %_initng_service_hook -p rwho daemon/rwhod
 %_initng_service_hook -p samba daemon/smb
+%_initng_service_hook -p samba-winbind daemon/winbind
 %_initng_service_hook -p sendmail daemon/sendmail
 %_initng_service_hook -p shaperd.2 daemon/shaperd
 %_initng_service_hook -p smartsuite daemon/smartd
@@ -328,6 +337,7 @@ fi \
 %_initng_service_hook -p squid daemon/squid
 %_initng_service_hook -p sqwebmail daemon/sqwebmail
 %_initng_service_hook -p srsd daemon/srsd
+%_initng_service_hook -p stunnel-standalone daemon/stunnel
 %_initng_service_hook -p subversion-svnserve daemon/svnserve
 %_initng_service_hook -p swapd daemon/swapd
 %_initng_service_hook -p sympa daemon/sympa
@@ -352,7 +362,6 @@ fi \
 %_initng_service_hook -p wccpd daemon/wccpd
 %_initng_service_hook -p webmin daemon/webmin
 %_initng_service_hook -p whoson-server daemon/whosond
-%_initng_service_hook -p wine daemon/wine
 %_initng_service_hook -p wwwoffle daemon/wwwoffle
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p ypbind-mt daemon/ypbind
