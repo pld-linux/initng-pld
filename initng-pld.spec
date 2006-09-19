@@ -5,7 +5,7 @@ Summary(de):	Initng Init Skripts für PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.6.7
-Release:	0.%{_snap}.1
+Release:	0.%{_snap}.2
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
@@ -76,6 +76,7 @@ if [ "$1" = "1" ] && [ "$2" = "1" ]; then \
 	for s in %*; do \
 		/sbin/ng-update add $s default \
 	done \
+	: \
 fi \
 \
 %triggerun -- %{-p*} \
@@ -85,6 +86,7 @@ if [ "$1" = "0" ] || [ "$2" = "0" ]; then \
 		/sbin/ng-update del $s \
 		/sbin/ngc -z $s \
 	done \
+	: \
 fi \
 
 # Usage:
