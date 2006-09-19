@@ -1,4 +1,4 @@
-%define		_snap 20060908
+%define		_snap 20060919
 %define		_extraver %{nil}
 Summary:	initng initscripts for PLD Linux
 Summary(de):	Initng Init Skripts für PLD Linux
@@ -9,13 +9,13 @@ Release:	0.%{_snap}.1
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
-# Source0-md5:	ab9a62ff2536d1c7589b7c6dfbce1c85
+# Source0-md5:	b1adb0c27ee89a91dfed14a34e769eb1
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= 0.6.1
 # initng-tools can be built from initng-ifiles.spec
 Requires:	initng-tools
-Requires:	rc-scripts
+Requires:	rc-scripts >= 0.4.0.27-4.10
 Conflicts:	ApacheJServ < 1.1.2-0.79
 Conflicts:	apache < 2.2.0
 Conflicts:	courier-imap < 4.0.5
@@ -188,6 +188,7 @@ fi \
 %_initng_service_hook -p httptunnel-server daemon/httptunnel
 %_initng_service_hook -p icecast daemon/icecast
 %_initng_service_hook -p idled daemon/idled
+%_initng_service_hook -p ifplugd daemon/ifplugd
 %_initng_service_hook -p imapproxy daemon/imapproxy
 %_initng_service_hook -p inn daemon/inn
 %_initng_service_hook -p ipac-ng daemon/ipac-ng
@@ -293,6 +294,7 @@ fi \
 %_initng_service_hook -p postgrey daemon/postgrey
 %_initng_service_hook -p pound daemon/pound
 %_initng_service_hook -p poweracpid daemon/poweracpid
+%_initng_service_hook -p powernowd daemon/powernowd
 %_initng_service_hook -p preload daemon/preload
 %_initng_service_hook -p privoxy daemon/privoxy
 %_initng_service_hook -p proftpd-standalone daemon/proftpd
@@ -313,6 +315,7 @@ fi \
 %_initng_service_hook -p rbldnsd daemon/rbldnsd
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
 %_initng_service_hook -p rc-scripts daemon/allowlogin daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
+%_initng_service_hook -p rc-scripts daemon/local
 %_initng_service_hook -p rdate daemon/rdate
 %_initng_service_hook -p routed daemon/routed
 %_initng_service_hook -p rp-pppoe-relay daemon/pppoe-relay
