@@ -5,7 +5,7 @@ Summary(de):	Initng Init Skripts für PLD Linux
 Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.6.7
-Release:	0.%{_snap}.4
+Release:	0.%{_snap}.5
 License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
@@ -316,8 +316,7 @@ fi \
 %_initng_service_hook -p rawdevices daemon/rawdevices
 %_initng_service_hook -p rbldnsd daemon/rbldnsd
 %_initng_service_hook -p rc-inetd daemon/rc-inetd
-%_initng_service_hook -p rc-scripts daemon/allowlogin daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots
-%_initng_service_hook -p rc-scripts daemon/local
+%_initng_service_hook -p rc-scripts daemon/allowlogin daemon/cpusets daemon/network daemon/timezone daemon/random daemon/sys-chroots daemon/local
 %_initng_service_hook -p rdate daemon/rdate
 %_initng_service_hook -p routed daemon/routed
 %_initng_service_hook -p rp-pppoe-relay daemon/pppoe-relay
