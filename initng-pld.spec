@@ -2,8 +2,8 @@
 %define		_extraver %{nil}
 %define		_rel	0.1
 Summary:	initng initscripts for PLD Linux
-Summary(de):	Initng Init Skripts für PLD Linux
-Summary(pl):	Skrypty inicjalizuj±ce initng dla PLD Linuksa
+Summary(de.UTF-8):   Initng Init Skripts fÃ¼r PLD Linux
+Summary(pl.UTF-8):   Skrypty inicjalizujÄ…ce initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.6.7
 Release:	0.%{_snap}.%{_rel}
@@ -33,16 +33,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 initng initscripts for PLD Linux.
 
-%description -l de
-Initng Init Skripte für PLD Linux.
+%description -l de.UTF-8
+Initng Init Skripte fÃ¼r PLD Linux.
 
-%description -l pl
-Skrypty inicjalizuj±ce initng dla PLD Linuksa.
+%description -l pl.UTF-8
+Skrypty inicjalizujÄ…ce initng dla PLD Linuksa.
 
 %package devel
 Summary:	Tools for developing PLD initng scripts
-Summary(de):	Tools zur PLD Initng Skripts Entwicklung
-Summary(pl):	Narzêdzia do rozwijania skryptów initng dla PLD
+Summary(de.UTF-8):   Tools zur PLD Initng Skripts Entwicklung
+Summary(pl.UTF-8):   NarzÄ™dzia do rozwijania skryptÃ³w initng dla PLD
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 Requires:	vim-syntax-initng
@@ -51,11 +51,11 @@ Requires:	vim-syntax-initng
 %description devel
 Tools for developing PLD initng scripts.
 
-%description devel -l de
+%description devel -l de.UTF-8
 Tools zur PLD Initng Skripts Entwicklung.
 
-%description devel -l pl
-Narzêdzia do rozwijania skryptów initng dla PLD.
+%description devel -l pl.UTF-8
+NarzÄ™dzia do rozwijania skryptÃ³w initng dla PLD.
 
 %prep
 %setup -q -n initng-initscripts-%{version}%{_extraver}-%{_snap}
