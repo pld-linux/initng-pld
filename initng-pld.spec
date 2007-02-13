@@ -2,8 +2,8 @@
 %define		_extraver %{nil}
 %define		_rel	0.1
 Summary:	initng initscripts for PLD Linux
-Summary(de.UTF-8):   Initng Init Skripts für PLD Linux
-Summary(pl.UTF-8):   Skrypty inicjalizujące initng dla PLD Linuksa
+Summary(de.UTF-8):	Initng Init Skripts für PLD Linux
+Summary(pl.UTF-8):	Skrypty inicjalizujące initng dla PLD Linuksa
 Name:		initng-pld
 Version:	0.6.7
 Release:	0.%{_snap}.%{_rel}
@@ -41,8 +41,8 @@ Skrypty inicjalizujące initng dla PLD Linuksa.
 
 %package devel
 Summary:	Tools for developing PLD initng scripts
-Summary(de.UTF-8):   Tools zur PLD Initng Skripts Entwicklung
-Summary(pl.UTF-8):   Narzędzia do rozwijania skryptów initng dla PLD
+Summary(de.UTF-8):	Tools zur PLD Initng Skripts Entwicklung
+Summary(pl.UTF-8):	Narzędzia do rozwijania skryptów initng dla PLD
 Group:		Development
 Requires:	%{name} = %{version}-%{release}
 Requires:	vim-syntax-initng
