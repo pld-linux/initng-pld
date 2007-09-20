@@ -1,6 +1,6 @@
 %define		_snap 20070128
 %define		_extraver %{nil}
-%define		_rel	0.1
+%define		_rel	0.3
 Summary:	initng initscripts for PLD Linux
 Summary(de.UTF-8):	Initng Init Skripts für PLD Linux
 Summary(pl.UTF-8):	Skrypty inicjalizujące initng dla PLD Linuksa
@@ -11,12 +11,12 @@ License:	GPL
 Group:		Base
 Source0:	initng-initscripts-%{version}%{_extraver}-%{_snap}.tar.bz2
 # Source0-md5:	36c97fc1d76d09eec578a6545778ad0e
+Source1:	ng-update
 URL:		http://svn.pld-linux.org/initng/
 Requires:	agetty
 Requires:	initng >= 0.6.1
-# initng-tools can be built from initng-ifiles.spec
-Requires:	initng-tools
 Requires:	rc-scripts >= 0.4.0.27-4.10
+Obsoletes:	initng-tools
 Conflicts:	ApacheJServ < 1.1.2-0.79
 Conflicts:	apache < 2.2.0
 Conflicts:	courier-imap < 4.0.5
@@ -64,6 +64,7 @@ Narzędzia do rozwijania skryptów initng dla PLD.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_sbindir}}
 cp -a */ *.runlevel *.virtual $RPM_BUILD_ROOT%{_sysconfdir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_sbindir}
 echo 'system' > $RPM_BUILD_ROOT%{_sysconfdir}/default.runlevel
 install migrate_rc.d-initng.i.sh test-syntax.sh $RPM_BUILD_ROOT%{_sysconfdir}
 
@@ -381,6 +382,7 @@ fi \
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/daemon
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/system
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/net
+%attr(755,root,root) %{_sbindir}/ng-update
 
 %files devel
 %defattr(644,root,root,755)
