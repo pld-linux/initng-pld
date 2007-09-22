@@ -220,7 +220,7 @@ fi \
 %_initng_service_hook -p lighttpd daemon/lighttpd
 %_initng_service_hook -p linux-atm-rc-scripts daemon/atm
 %_initng_service_hook -p linux-wlan-ng daemon/wlan
-%_initng_service_hook -p lirc daemon/lircmd
+%_initng_service_hook -p lirc daemon/lircmd daemon/lircd
 %_initng_service_hook -p lm_sensors-sensord daemon/sensors
 %_initng_service_hook -p lms-lmsd daemon/lmsd
 %_initng_service_hook -p lstat daemon/lstatd
@@ -308,7 +308,7 @@ fi \
 %_initng_service_hook -p qpopper-ssl-standalone daemon/qpoppersd
 %_initng_service_hook -p qpopper-standalone daemon/qpopperd
 %_initng_service_hook -p quagga daemon/zebra
-%_initng_service_hook -p quake2-server daemon/quake2-server
+%_initng_service_hook -p quake2-server daemon/quake2-server daemon/q2ded
 %_initng_service_hook -p quake3-server daemon/q3ded
 %_initng_service_hook -p quakeforge-servers daemon/nq-serverd daemon/qw-serverd
 %_initng_service_hook -p quota-rquotad daemon/rquotad
@@ -346,6 +346,7 @@ fi \
 %_initng_service_hook -p subversion-svnserve daemon/svnserve
 %_initng_service_hook -p swapd daemon/swapd
 %_initng_service_hook -p sympa daemon/sympa
+%_initng_service_hook -p synce-odccm daemon/odccm
 %_initng_service_hook -p syslog daemon/syslog
 %_initng_service_hook -p syslog-ng daemon/syslog-ng
 %_initng_service_hook -p sysstat daemon/sysstat
