@@ -1,6 +1,6 @@
 %define		_snap 20070922
 %define		_extraver %{nil}
-%define		_rel	0.1
+%define		_rel	1
 Summary:	initng initscripts for PLD Linux
 Summary(de.UTF-8):	Initng Init Skripts für PLD Linux
 Summary(pl.UTF-8):	Skrypty inicjalizujące initng dla PLD Linuksa
@@ -24,6 +24,7 @@ Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	spamassassin-spamd < 3.1.0-5.3
 Conflicts:	util-linux < 2.12r-2.1
 Conflicts:	wine < 0.9.20-1
+Conflicts:	yum < 3.2.8
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -372,7 +373,7 @@ fi \
 %_initng_service_hook -p xen daemon/xend daemon/xendomains
 %_initng_service_hook -p ypbind-mt daemon/ypbind
 %_initng_service_hook -p ypserv daemon/rpc.yppasswdd daemon/ypserv daemon/ypxfrd
-%_initng_service_hook -p yum daemon/yum
+%_initng_service_hook -p yum-updatesd daemon/yum
 %_initng_service_hook -p zmailer daemon/zmailer
 
 %files
