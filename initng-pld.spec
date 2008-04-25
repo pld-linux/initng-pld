@@ -1,6 +1,6 @@
 %define		_snap 20070922
 %define		_extraver %{nil}
-%define		_rel	1
+%define		_rel	2
 Summary:	initng initscripts for PLD Linux
 Summary(de.UTF-8):	Initng Init Skripts für PLD Linux
 Summary(pl.UTF-8):	Skrypty inicjalizujące initng dla PLD Linuksa
@@ -18,13 +18,13 @@ Requires:	initng >= 0.6.1
 Requires:	rc-scripts >= 0.4.0.27-4.10
 Obsoletes:	initng-tools
 Conflicts:	ApacheJServ < 1.1.2-0.79
-Conflicts:	apache < 2.2.0
-Conflicts:	courier-imap < 4.0.5
+Conflicts:	apache < 2.2.0-1
+Conflicts:	courier-imap < 4.0.5-1
 Conflicts:	mDNSResponder < 107-2.1
 Conflicts:	spamassassin-spamd < 3.1.0-5.3
 Conflicts:	util-linux < 2.12r-2.1
 Conflicts:	wine < 0.9.20-1
-Conflicts:	yum < 3.2.8
+Conflicts:	yum < 3.2.8-1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
